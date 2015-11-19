@@ -11,8 +11,13 @@ import org.hibernate.Transaction;
 import java.io.Serializable;
 import java.util.List;
 
-abstract class AbstractModelManagerImpl<EntityType extends AbstractModel, IdType, BaseIdType extends Serializable> implements AbstractModelManager<EntityType, IdType> {
-    private static SessionFactory sessionFactory;
+abstract class AbstractModelManagerImpl<EntityType extends AbstractModel, IdType,
+        BaseEntityType, BaseIdType extends Serializable> implements AbstractModelManager<EntityType, IdType> {
+    private SessionFactory sessionFactory;
+
+    protected AbstractModelManagerImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     interface TransactionAction<ResultType> {
         ResultType run(Session session);
@@ -68,8 +73,8 @@ abstract class AbstractModelManagerImpl<EntityType extends AbstractModel, IdType
             @Override
             public Void run(Session session) {
                 BaseIdType baseId = createBaseIdFromIdType((IdType) entity.getId());
-                EntityType entityOld = (EntityType) session.get(getAnnotatedClass(), baseId);
-                updateDatabaseFields(entityOld, entity);
+                BaseEntityType entityOld = (BaseEntityType) session.get(getAnnotatedClass(), baseId);
+                updateDatabaseFields(entityOld, (BaseEntityType) entity);
                 session.update(entityOld);
                 return null;
             }
@@ -104,5 +109,5 @@ abstract class AbstractModelManagerImpl<EntityType extends AbstractModel, IdType
     protected abstract IdType createIdFromBaseIdType(BaseIdType id);
     protected abstract BaseIdType createBaseIdFromIdType(IdType id);
     protected abstract Class getAnnotatedClass();
-    protected abstract void updateDatabaseFields(EntityType entityOld, EntityType entityNew);
+    protected abstract void updateDatabaseFields(BaseEntityType entityOld, BaseEntityType entityNew);
 }
