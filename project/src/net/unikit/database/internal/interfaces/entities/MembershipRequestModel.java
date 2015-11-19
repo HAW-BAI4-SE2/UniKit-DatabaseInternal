@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by Andreas on 19.11.2015.
  */
-public interface MembershipRequestModel extends AbstractModel {
+public interface MembershipRequestModel extends AbstractModel<Integer> {
     Integer getId();
 
     String getApplicantStudentNumber();

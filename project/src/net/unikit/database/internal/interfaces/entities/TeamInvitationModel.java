@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by Andreas on 19.11.2015.
  */
-public interface TeamInvitationModel extends AbstractModel {
+public interface TeamInvitationModel extends AbstractModel<Integer> {
     Integer getId();
 
     String getInviteeStudentNumber();
