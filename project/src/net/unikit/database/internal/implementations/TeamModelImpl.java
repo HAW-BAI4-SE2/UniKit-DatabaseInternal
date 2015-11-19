@@ -2,15 +2,12 @@ package net.unikit.database.internal.implementations;
 
 import net.unikit.database.internal.interfaces.entities.TeamModel;
 
+import java.util.ArrayList;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import java.util.List;
+import javax.persistence.*;
+
 import static javax.persistence.GenerationType.IDENTITY;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "TEAM")
@@ -33,4 +30,13 @@ final class TeamModelImpl implements TeamModel {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "updated_at", nullable = false, length = 19)
 	private Date updatedAt;
+
+	@OneToMany(mappedBy = "teamField")
+	private List<MembershipRequestModelImpl> membershipRequestModels = new ArrayList<>();
+
+	@OneToMany(mappedBy = "teamField")
+	private List<TeamInvitationModelImpl> teamInvitationModels = new ArrayList<>();
+
+	@OneToMany(mappedBy = "teamField")
+	private List<TeamRegistrationModelImpl> teamRegistrationModels = new ArrayList<>();
 }
