@@ -16,13 +16,10 @@ public interface TeamModel {
     void setCreatedByStudentNumber(String createdByStudentNumber);
 
     List<MembershipRequestModel> getMembershipRequests();
-    void setMembershipRequests(List<MembershipRequestModel> membershipRequests);
 
     List<TeamInvitationModel> getTeamInvitations();
-    void setTeamInvitations(List<TeamInvitationModel> teamInvitations);
 
     List<TeamRegistrationModel> getTeamRegistrations();
-    void setTeamRegistrations(List<TeamRegistrationModel> teamRegistrations);
 
     Date getCreatedAt();
 
