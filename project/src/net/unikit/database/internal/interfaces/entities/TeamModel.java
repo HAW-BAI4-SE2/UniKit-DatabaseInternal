@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Andreas on 19.11.2015.
  */
-public interface TeamModel {
+public interface TeamModel extends AbstractModel {
     Integer getId();
 
     int getCourseId();
