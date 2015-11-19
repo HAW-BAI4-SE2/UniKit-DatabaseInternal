@@ -1,6 +1,9 @@
 package net.unikit.database.internal.implementations;
 
+import net.unikit.database.internal.interfaces.entities.MembershipRequestModel;
+import net.unikit.database.internal.interfaces.entities.TeamInvitationModel;
 import net.unikit.database.internal.interfaces.entities.TeamModel;
+import net.unikit.database.internal.interfaces.entities.TeamRegistrationModel;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -115,5 +118,55 @@ final class TeamModelImpl implements TeamModel {
 
 	void setTeamRegistrationModels(List<TeamRegistrationModelImpl> teamRegistrationModels) {
 		this.teamRegistrationModels = teamRegistrationModels;
+	}
+
+	@Transient
+	public Integer getId() {
+		return null;
+	}
+
+	@Transient
+	public int getCourseId() {
+		return 0;
+	}
+
+	@Transient
+	public void setCourseId(int courseId) {
+
+	}
+
+	@Transient
+	public String getCreatedByStudentNumber() {
+		return null;
+	}
+
+	@Transient
+	public void setCreatedByStudentNumber(String createdByStudentNumber) {
+
+	}
+
+	@Transient
+	public List<MembershipRequestModel> getMembershipRequests() {
+		return null;
+	}
+
+	@Transient
+	public List<TeamInvitationModel> getTeamInvitations() {
+		return null;
+	}
+
+	@Transient
+	public List<TeamRegistrationModel> getTeamRegistrations() {
+		return null;
+	}
+
+	@Transient
+	public Date getCreatedAt() {
+		return null;
+	}
+
+	@Transient
+	public Date getUpdatedAt() {
+		return null;
 	}
 }

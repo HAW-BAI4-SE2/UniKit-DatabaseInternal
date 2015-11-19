@@ -3,15 +3,9 @@ package net.unikit.database.internal.implementations;
 import net.unikit.database.internal.interfaces.entities.CourseRegistrationModel;
 
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
+
 import static javax.persistence.GenerationType.IDENTITY;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
 
 @Entity
 @Table(name = "COURSE_REGISTRATION", uniqueConstraints = @UniqueConstraint(columnNames = {
@@ -96,5 +90,50 @@ final class CourseRegistrationModelImpl implements CourseRegistrationModel {
 
 	void setUpdatedAtField(Date updatedAtField) {
 		this.updatedAtField = updatedAtField;
+	}
+
+	@Transient
+	public Integer getId() {
+		return null;
+	}
+
+	@Transient
+	public String getStudentNumber() {
+		return null;
+	}
+
+	@Transient
+	public void setStudentNumber(String studentNumber) {
+
+	}
+
+	@Transient
+	public int getCourseId() {
+		return 0;
+	}
+
+	@Transient
+	public void setCourseId(int courseId) {
+
+	}
+
+	@Transient
+	public boolean isCurrentlyAssignedToTeam() {
+		return false;
+	}
+
+	@Transient
+	public void setCurrentlyAssignedToTeam(boolean currentlyAssignedToTeam) {
+
+	}
+
+	@Transient
+	public Date getCreatedAt() {
+		return null;
+	}
+
+	@Transient
+	public Date getUpdatedAt() {
+		return null;
 	}
 }

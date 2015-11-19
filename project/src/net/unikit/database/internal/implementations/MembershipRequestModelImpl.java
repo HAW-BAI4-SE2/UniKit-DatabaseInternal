@@ -1,6 +1,7 @@
 package net.unikit.database.internal.implementations;
 
 import net.unikit.database.internal.interfaces.entities.MembershipRequestModel;
+import net.unikit.database.internal.interfaces.entities.TeamModel;
 
 import java.util.Date;
 import javax.persistence.*;
@@ -79,5 +80,40 @@ final class MembershipRequestModelImpl implements MembershipRequestModel {
 
 	void setUpdatedAtField(Date updatedAtField) {
 		this.updatedAtField = updatedAtField;
+	}
+
+	@Transient
+	public Integer getId() {
+		return null;
+	}
+
+	@Transient
+	public String getApplicantStudentNumber() {
+		return null;
+	}
+
+	@Transient
+	public void setApplicantStudentNumber(String applicantStudentNumber) {
+
+	}
+
+	@Transient
+	public TeamModel getTeam() {
+		return null;
+	}
+
+	@Transient
+	public void setTeam(TeamModel team) {
+
+	}
+
+	@Transient
+	public Date getCreatedAt() {
+		return null;
+	}
+
+	@Transient
+	public Date getUpdatedAt() {
+		return null;
 	}
 }

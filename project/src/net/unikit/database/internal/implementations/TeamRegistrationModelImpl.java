@@ -1,5 +1,6 @@
 package net.unikit.database.internal.implementations;
 
+import net.unikit.database.internal.interfaces.entities.TeamModel;
 import net.unikit.database.internal.interfaces.entities.TeamRegistrationModel;
 
 import java.util.Date;
@@ -79,5 +80,40 @@ final class TeamRegistrationModelImpl implements TeamRegistrationModel {
 
 	void setUpdatedAtField(Date updatedAtField) {
 		this.updatedAtField = updatedAtField;
+	}
+
+	@Transient
+	public Integer getId() {
+		return null;
+	}
+
+	@Transient
+	public String getStudentNumber() {
+		return null;
+	}
+
+	@Transient
+	public void setStudentNumber(String studentNumber) {
+
+	}
+
+	@Transient
+	public TeamModel getTeam() {
+		return null;
+	}
+
+	@Transient
+	public void setTeam(TeamModel team) {
+
+	}
+
+	@Transient
+	public Date getCreatedAt() {
+		return null;
+	}
+
+	@Transient
+	public Date getUpdatedAt() {
+		return null;
 	}
 }
