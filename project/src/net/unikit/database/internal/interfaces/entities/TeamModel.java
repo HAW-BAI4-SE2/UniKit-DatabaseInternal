@@ -1,5 +1,6 @@
 package net.unikit.database.internal.interfaces.entities;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -7,14 +8,23 @@ import java.util.List;
  */
 public interface TeamModel {
     Integer getId();
+
     int getCourseId();
     void setCourseId(int courseId);
+
     String getCreatedByStudentNumber();
     void setCreatedByStudentNumber(String createdByStudentNumber);
+
     List<MembershipRequestModel> getMembershipRequests();
     void setMembershipRequests(List<MembershipRequestModel> membershipRequests);
+
     List<TeamInvitationModel> getTeamInvitations();
     void setTeamInvitations(List<TeamInvitationModel> teamInvitations);
+
     List<TeamRegistrationModel> getTeamRegistrations();
     void setTeamRegistrations(List<TeamRegistrationModel> teamRegistrations);
+
+    Date getCreatedAt();
+
+    Date getUpdatedAt();
 }
