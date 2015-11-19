@@ -20,22 +20,81 @@ final class CourseRegistrationModelImpl implements CourseRegistrationModel {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
-	private Integer id;
+	private Integer idField;
 
 	@Column(name = "student_number", nullable = false, length = 31)
-	private String studentNumber;
+	private String studentNumberField;
 
 	@Column(name = "course_id", nullable = false)
-	private int courseId;
+	private int courseIdField;
 
 	@Column(name = "currently_assigned_to_team", nullable = false)
-	private boolean currentlyAssignedToTeam;
+	private boolean currentlyAssignedToTeamField;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "created_at", nullable = false, length = 19)
-	private Date createdAt;
+	private Date createdAtField;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "updated_at", nullable = false, length = 19)
-	private Date updatedAt;
+	private Date updatedAtField;
+
+	public CourseRegistrationModelImpl() {
+	}
+
+	public CourseRegistrationModelImpl(String studentNumberField, int courseIdField, boolean currentlyAssignedToTeamField, Date createdAtField, Date updatedAtField) {
+		this.studentNumberField = studentNumberField;
+		this.courseIdField = courseIdField;
+		this.currentlyAssignedToTeamField = currentlyAssignedToTeamField;
+		this.createdAtField = createdAtField;
+		this.updatedAtField = updatedAtField;
+	}
+
+	Integer getIdField() {
+		return idField;
+	}
+
+	void setIdField(Integer idField) {
+		this.idField = idField;
+	}
+
+	String getStudentNumberField() {
+		return studentNumberField;
+	}
+
+	void setStudentNumberField(String studentNumberField) {
+		this.studentNumberField = studentNumberField;
+	}
+
+	int getCourseIdField() {
+		return courseIdField;
+	}
+
+	void setCourseIdField(int courseIdField) {
+		this.courseIdField = courseIdField;
+	}
+
+	boolean isCurrentlyAssignedToTeamField() {
+		return currentlyAssignedToTeamField;
+	}
+
+	void setCurrentlyAssignedToTeamField(boolean currentlyAssignedToTeamField) {
+		this.currentlyAssignedToTeamField = currentlyAssignedToTeamField;
+	}
+
+	Date getCreatedAtField() {
+		return createdAtField;
+	}
+
+	void setCreatedAtField(Date createdAtField) {
+		this.createdAtField = createdAtField;
+	}
+
+	Date getUpdatedAtField() {
+		return updatedAtField;
+	}
+
+	void setUpdatedAtField(Date updatedAtField) {
+		this.updatedAtField = updatedAtField;
+	}
 }
