@@ -1,6 +1,6 @@
 package net.unikit.database.internal.implementations;
 
-import net.unikit.database.internal.interfaces.TeamModel;
+import net.unikit.database.internal.interfaces.entities.TeamModel;
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "TEAM")
-public class TeamModelImpl implements TeamModel {
+final class TeamModelImpl implements TeamModel {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
