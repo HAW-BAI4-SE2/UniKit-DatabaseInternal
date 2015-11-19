@@ -6,9 +6,9 @@ package net.unikit.database.internal.interfaces.entities;
 public interface TeamInvitationModel {
     Integer getId();
     String getInviteeStudentNumber();
-    void setInviteeStudentNumber(String inviteeStudentNumberField);
+    void setInviteeStudentNumber(String inviteeStudentNumber);
     TeamModel getTeam();
-    void setTeam(TeamModel teamField);
+    void setTeam(TeamModel team);
     String getCreatedByStudentNumber();
-    void setCreatedByStudentNumber(String createdByStudentNumberField);
+    void setCreatedByStudentNumber(String createdByStudentNumber);
 }

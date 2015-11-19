@@ -6,7 +6,7 @@ package net.unikit.database.internal.interfaces.entities;
 public interface TeamRegistrationModel {
     Integer getId();
     String getStudentNumber();
-    void setStudentNumber(String studentNumberField);
+    void setStudentNumber(String studentNumber);
     TeamModel getTeam();
-    void setTeam(TeamModel teamField);
+    void setTeam(TeamModel team);
 }

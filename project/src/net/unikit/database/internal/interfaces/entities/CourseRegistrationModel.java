@@ -6,9 +6,9 @@ package net.unikit.database.internal.interfaces.entities;
 public interface CourseRegistrationModel {
     Integer getId();
     String getStudentNumber();
-    void setStudentNumber(String studentNumberField);
+    void setStudentNumber(String studentNumber);
     int getCourseId();
-    void setCourseId(int courseIdField);
+    void setCourseId(int courseId);
     boolean isCurrentlyAssignedToTeam();
-    void setCurrentlyAssignedToTeam(boolean currentlyAssignedToTeamField);
+    void setCurrentlyAssignedToTeam(boolean currentlyAssignedToTeam);
 }

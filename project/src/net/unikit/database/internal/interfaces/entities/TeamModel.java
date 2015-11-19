@@ -8,13 +8,13 @@ import java.util.List;
 public interface TeamModel {
     Integer getId();
     int getCourseId();
-    void setCourseId(int courseIdField);
+    void setCourseId(int courseId);
     String getCreatedByStudentNumber();
-    void setCreatedByStudentNumber(String createdByStudentNumberField);
+    void setCreatedByStudentNumber(String createdByStudentNumber);
     List<MembershipRequestModel> getMembershipRequests();
-    void setMembershipRequestModels(List<MembershipRequestModel> membershipRequestModels);
+    void setMembershipRequests(List<MembershipRequestModel> membershipRequests);
     List<TeamInvitationModel> getTeamInvitations();
-    void setTeamInvitationModels(List<TeamInvitationModel> teamInvitationModels);
+    void setTeamInvitations(List<TeamInvitationModel> teamInvitations);
     List<TeamRegistrationModel> getTeamRegistrations();
-    void setTeamRegistrationModels(List<TeamRegistrationModel> teamRegistrationModels);
+    void setTeamRegistrations(List<TeamRegistrationModel> teamRegistrations);
 }
