@@ -28,11 +28,11 @@ final class TeamInvitationModelImpl implements TeamInvitationModel {
 	private String createdByStudentNumberField;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "created_at", nullable = false, length = 19)
+	@Column(name = "created_at", nullable = true, length = 19)
 	private Date createdAtField;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "updated_at", nullable = false, length = 19)
+	@Column(name = "updated_at", nullable = true, length = 19)
 	private Date updatedAtField;
 
 	public TeamInvitationModelImpl() {

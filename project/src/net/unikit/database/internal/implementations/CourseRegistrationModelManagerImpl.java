@@ -41,8 +41,8 @@ final class CourseRegistrationModelManagerImpl
     @Override
     protected void updateDatabaseFields(CourseRegistrationModelImpl entityOld, CourseRegistrationModelImpl entityNew) {
         entityOld.setIdField(entityNew.getIdField());
-        entityOld.setStudentNumberField(entityOld.getStudentNumberField());
+        entityOld.setStudentNumberField(entityNew.getStudentNumberField());
         entityOld.setCourseIdField(entityNew.getCourseId());
-        entityOld.setCurrentlyAssignedToTeam(entityOld.isCurrentlyAssignedToTeamField());
+        entityOld.setCurrentlyAssignedToTeam(entityNew.isCurrentlyAssignedToTeamField());
     }
 }
