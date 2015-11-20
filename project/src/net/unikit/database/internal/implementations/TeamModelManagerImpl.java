@@ -41,5 +41,6 @@ final class TeamModelManagerImpl
     @Override
     protected void updateDatabaseFields(TeamModelImpl entityOld, TeamModelImpl entityNew) {
         // TODO
+        throw new UnsupportedOperationException();
     }
 }

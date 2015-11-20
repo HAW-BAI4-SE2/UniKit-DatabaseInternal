@@ -41,5 +41,6 @@ final class TeamRegistrationModelManagerImpl
     @Override
     protected void updateDatabaseFields(TeamRegistrationModelImpl entityOld, TeamRegistrationModelImpl entityNew) {
         // TODO
+        throw new UnsupportedOperationException();
     }
 }

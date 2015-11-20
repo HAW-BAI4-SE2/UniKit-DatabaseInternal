@@ -41,5 +41,6 @@ final class TeamInvitationModelManagerImpl
     @Override
     protected void updateDatabaseFields(TeamInvitationModelImpl entityOld, TeamInvitationModelImpl entityNew) {
         // TODO
+        throw new UnsupportedOperationException();
     }
 }

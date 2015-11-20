@@ -41,5 +41,6 @@ final class MembershipRequestModelManagerImpl
     @Override
     protected void updateDatabaseFields(MembershipRequestModelImpl entityOld, MembershipRequestModelImpl entityNew) {
         // TODO
+        throw new UnsupportedOperationException();
     }
 }
