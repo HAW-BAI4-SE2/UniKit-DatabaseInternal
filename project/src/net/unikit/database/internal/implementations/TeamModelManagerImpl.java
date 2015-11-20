@@ -40,7 +40,11 @@ final class TeamModelManagerImpl
 
     @Override
     protected void updateDatabaseFields(TeamModelImpl entityOld, TeamModelImpl entityNew) {
-        // TODO
-        throw new UnsupportedOperationException();
+        entityOld.setIdField(entityNew.getIdField());
+        entityOld.setCourseIdField(entityNew.getCourseIdField());
+        entityOld.setCreatedByStudentNumberField(entityNew.getCreatedByStudentNumberField());
+        entityOld.setMembershipRequestModels(entityNew.getMembershipRequestModels());
+        entityOld.setTeamInvitationModels(entityNew.getTeamInvitationModels());
+        entityOld.setTeamRegistrationModels(entityNew.getTeamRegistrationModels());
     }
 }

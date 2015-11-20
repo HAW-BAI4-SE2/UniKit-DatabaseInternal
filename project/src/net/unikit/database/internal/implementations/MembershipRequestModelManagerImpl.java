@@ -40,7 +40,8 @@ final class MembershipRequestModelManagerImpl
 
     @Override
     protected void updateDatabaseFields(MembershipRequestModelImpl entityOld, MembershipRequestModelImpl entityNew) {
-        // TODO
-        throw new UnsupportedOperationException();
+        entityOld.setIdField(entityNew.getIdField());
+        entityOld.setApplicantStudentNumberField(entityNew.getApplicantStudentNumberField());
+        entityOld.setTeamField(entityNew.getTeamField());
     }
 }
