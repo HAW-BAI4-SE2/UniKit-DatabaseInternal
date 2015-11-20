@@ -20,26 +20,26 @@ final class MembershipRequestModelManagerImpl
 
     @Override
     public MembershipRequestModel createEntity() {
-        return null;
+        return new MembershipRequestModelImpl();
     }
 
     @Override
     protected Integer createIdFromBaseIdType(Integer id) {
-        return null;
+        return id;
     }
 
     @Override
     protected Integer createBaseIdFromIdType(Integer id) {
-        return null;
+        return id;
     }
 
     @Override
     protected Class getAnnotatedClass() {
-        return null;
+        return MembershipRequestModelImpl.class;
     }
 
     @Override
     protected void updateDatabaseFields(MembershipRequestModelImpl entityOld, MembershipRequestModelImpl entityNew) {
-
+        // TODO
     }
 }

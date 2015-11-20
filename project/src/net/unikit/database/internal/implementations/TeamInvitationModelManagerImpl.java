@@ -20,26 +20,26 @@ final class TeamInvitationModelManagerImpl
 
     @Override
     public TeamInvitationModel createEntity() {
-        return null;
+        return new TeamInvitationModelImpl();
     }
 
     @Override
     protected Integer createIdFromBaseIdType(Integer id) {
-        return null;
+        return id;
     }
 
     @Override
     protected Integer createBaseIdFromIdType(Integer id) {
-        return null;
+        return id;
     }
 
     @Override
     protected Class getAnnotatedClass() {
-        return null;
+        return TeamInvitationModelImpl.class;
     }
 
     @Override
     protected void updateDatabaseFields(TeamInvitationModelImpl entityOld, TeamInvitationModelImpl entityNew) {
-
+        // TODO
     }
 }

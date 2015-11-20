@@ -20,26 +20,26 @@ final class TeamRegistrationModelManagerImpl
 
     @Override
     public TeamRegistrationModel createEntity() {
-        return null;
+        return new TeamRegistrationModelImpl();
     }
 
     @Override
     protected Integer createIdFromBaseIdType(Integer id) {
-        return null;
+        return id;
     }
 
     @Override
     protected Integer createBaseIdFromIdType(Integer id) {
-        return null;
+        return id;
     }
 
     @Override
     protected Class getAnnotatedClass() {
-        return null;
+        return TeamRegistrationModelImpl.class;
     }
 
     @Override
     protected void updateDatabaseFields(TeamRegistrationModelImpl entityOld, TeamRegistrationModelImpl entityNew) {
-
+        // TODO
     }
 }
