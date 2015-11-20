@@ -84,36 +84,36 @@ final class MembershipRequestModelImpl implements MembershipRequestModel {
 
 	@Transient
 	public Integer getId() {
-		return null;
+		return getIdField();
 	}
 
 	@Transient
 	public String getApplicantStudentNumber() {
-		return null;
+		return getApplicantStudentNumberField();
 	}
 
 	@Transient
 	public void setApplicantStudentNumber(String applicantStudentNumber) {
-
+		setApplicantStudentNumberField(applicantStudentNumber);
 	}
 
 	@Transient
 	public TeamModel getTeam() {
-		return null;
+		return getTeamField();
 	}
 
 	@Transient
 	public void setTeam(TeamModel team) {
-
+		setTeamField((TeamModelImpl) team);
 	}
 
 	@Transient
 	public Date getCreatedAt() {
-		return null;
+		return getCreatedAtField();
 	}
 
 	@Transient
 	public Date getUpdatedAt() {
-		return null;
+		return getUpdatedAtField();
 	}
 }

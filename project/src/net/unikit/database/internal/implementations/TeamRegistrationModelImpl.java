@@ -84,36 +84,36 @@ final class TeamRegistrationModelImpl implements TeamRegistrationModel {
 
 	@Transient
 	public Integer getId() {
-		return null;
+		return getIdField();
 	}
 
 	@Transient
 	public String getStudentNumber() {
-		return null;
+		return getStudentNumberField();
 	}
 
 	@Transient
 	public void setStudentNumber(String studentNumber) {
-
+		setStudentNumberField(studentNumber);
 	}
 
 	@Transient
 	public TeamModel getTeam() {
-		return null;
+		return getTeamField();
 	}
 
 	@Transient
 	public void setTeam(TeamModel team) {
-
+		setTeamField((TeamModelImpl) team);
 	}
 
 	@Transient
 	public Date getCreatedAt() {
-		return null;
+		return getCreatedAtField();
 	}
 
 	@Transient
 	public Date getUpdatedAt() {
-		return null;
+		return getUpdatedAtField();
 	}
 }

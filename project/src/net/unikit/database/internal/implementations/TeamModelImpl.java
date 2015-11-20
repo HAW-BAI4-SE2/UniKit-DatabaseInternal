@@ -1,5 +1,6 @@
 package net.unikit.database.internal.implementations;
 
+import com.google.common.collect.ImmutableList;
 import net.unikit.database.internal.interfaces.entities.MembershipRequestModel;
 import net.unikit.database.internal.interfaces.entities.TeamInvitationModel;
 import net.unikit.database.internal.interfaces.entities.TeamModel;
@@ -122,51 +123,51 @@ final class TeamModelImpl implements TeamModel {
 
 	@Transient
 	public Integer getId() {
-		return null;
+		return getIdField();
 	}
 
 	@Transient
 	public int getCourseId() {
-		return 0;
+		return getCourseIdField();
 	}
 
 	@Transient
 	public void setCourseId(int courseId) {
-
+		setCourseIdField(courseId);
 	}
 
 	@Transient
 	public String getCreatedByStudentNumber() {
-		return null;
+		return getCreatedByStudentNumberField();
 	}
 
 	@Transient
 	public void setCreatedByStudentNumber(String createdByStudentNumber) {
-
+		setCreatedByStudentNumberField(createdByStudentNumber);
 	}
 
 	@Transient
 	public List<MembershipRequestModel> getMembershipRequests() {
-		return null;
+		return ImmutableList.copyOf(getMembershipRequestModels());
 	}
 
 	@Transient
 	public List<TeamInvitationModel> getTeamInvitations() {
-		return null;
+		return ImmutableList.copyOf(getTeamInvitationModels());
 	}
 
 	@Transient
 	public List<TeamRegistrationModel> getTeamRegistrations() {
-		return null;
+		return ImmutableList.copyOf(getTeamRegistrationModels());
 	}
 
 	@Transient
 	public Date getCreatedAt() {
-		return null;
+		return getCreatedAtField();
 	}
 
 	@Transient
 	public Date getUpdatedAt() {
-		return null;
+		return getUpdatedAtField();
 	}
 }

@@ -94,46 +94,46 @@ final class CourseRegistrationModelImpl implements CourseRegistrationModel {
 
 	@Transient
 	public Integer getId() {
-		return null;
+		return getIdField();
 	}
 
 	@Transient
 	public String getStudentNumber() {
-		return null;
+		return getStudentNumberField();
 	}
 
 	@Transient
 	public void setStudentNumber(String studentNumber) {
-
+		setStudentNumberField(studentNumber);
 	}
 
 	@Transient
 	public int getCourseId() {
-		return 0;
+		return getCourseIdField();
 	}
 
 	@Transient
 	public void setCourseId(int courseId) {
-
+		setCourseIdField(courseId);
 	}
 
 	@Transient
 	public boolean isCurrentlyAssignedToTeam() {
-		return false;
+		return isCurrentlyAssignedToTeamField();
 	}
 
 	@Transient
 	public void setCurrentlyAssignedToTeam(boolean currentlyAssignedToTeam) {
-
+		setCurrentlyAssignedToTeamField(currentlyAssignedToTeam);
 	}
 
 	@Transient
 	public Date getCreatedAt() {
-		return null;
+		return getCreatedAtField();
 	}
 
 	@Transient
 	public Date getUpdatedAt() {
-		return null;
+		return getUpdatedAtField();
 	}
 }

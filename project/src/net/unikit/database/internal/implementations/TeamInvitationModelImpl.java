@@ -96,46 +96,46 @@ final class TeamInvitationModelImpl implements TeamInvitationModel {
 
 	@Transient
 	public Integer getId() {
-		return null;
+		return getIdField();
 	}
 
 	@Transient
 	public String getInviteeStudentNumber() {
-		return null;
+		return getInviteeStudentNumberField();
 	}
 
 	@Transient
 	public void setInviteeStudentNumber(String inviteeStudentNumber) {
-
+		setInviteeStudentNumberField(inviteeStudentNumber);
 	}
 
 	@Transient
 	public TeamModel getTeam() {
-		return null;
+		return getTeamField();
 	}
 
 	@Transient
 	public void setTeam(TeamModel team) {
-
+		setTeamField((TeamModelImpl) team);
 	}
 
 	@Transient
 	public String getCreatedByStudentNumber() {
-		return null;
+		return getCreatedByStudentNumberField();
 	}
 
 	@Transient
 	public void setCreatedByStudentNumber(String createdByStudentNumber) {
-
+		setCreatedByStudentNumberField(createdByStudentNumber);
 	}
 
 	@Transient
 	public Date getCreatedAt() {
-		return null;
+		return getCreatedAtField();
 	}
 
 	@Transient
 	public Date getUpdatedAt() {
-		return null;
+		return getUpdatedAtField();
 	}
 }
