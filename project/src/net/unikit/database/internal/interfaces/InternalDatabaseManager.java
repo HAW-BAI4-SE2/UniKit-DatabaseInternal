@@ -22,7 +22,7 @@ public interface InternalDatabaseManager {
 
     /**
      * Getter for the manager for the team invitations.
-     * @return The manager for the course team invitations
+     * @return The manager for the team invitations
      */
     TeamInvitationModelManager getTeamInvitationModelManager();
 

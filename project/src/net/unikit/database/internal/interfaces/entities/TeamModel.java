@@ -39,10 +39,25 @@ public interface TeamModel extends AbstractModel<Integer> {
      */
     void setCreatedByStudentNumber(String createdByStudentNumber);
 
+    /**
+     * Getter for the membership requests for the team.
+     * Returns a immutable list of {@link MembershipRequestModel}.
+     * @return The membership requests for the team
+     */
     List<MembershipRequestModel> getMembershipRequests();
 
+    /**
+     * Getter for the invitations of the team.
+     * Returns a immutable list of {@link TeamInvitationModel}.
+     * @return The invitations of the team
+     */
     List<TeamInvitationModel> getTeamInvitations();
 
+    /**
+     * Getter for the registrations of the team.
+     * Returns a immutable list of {@link TeamRegistrationModel}.
+     * @return The registrations of the team
+     */
     List<TeamRegistrationModel> getTeamRegistrations();
 
     /**
