@@ -1,5 +1,6 @@
 package net.unikit.database.internal.interfaces.managers;
 
+import net.unikit.database.interfaces.managers.AbstractModelManager;
 import net.unikit.database.internal.interfaces.entities.MembershipRequestModel;
 
 /**

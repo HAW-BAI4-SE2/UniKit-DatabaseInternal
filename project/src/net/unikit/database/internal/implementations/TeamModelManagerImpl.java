@@ -1,5 +1,6 @@
 package net.unikit.database.internal.implementations;
 
+import net.unikit.database.implementations.AbstractModelManagerImpl;
 import net.unikit.database.internal.interfaces.entities.TeamModel;
 import net.unikit.database.internal.interfaces.managers.TeamModelManager;
 import org.hibernate.SessionFactory;

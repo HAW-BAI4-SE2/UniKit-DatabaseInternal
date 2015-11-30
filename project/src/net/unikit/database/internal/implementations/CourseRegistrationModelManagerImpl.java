@@ -1,5 +1,6 @@
 package net.unikit.database.internal.implementations;
 
+import net.unikit.database.implementations.AbstractModelManagerImpl;
 import net.unikit.database.internal.interfaces.entities.CourseRegistrationModel;
 import net.unikit.database.internal.interfaces.managers.CourseRegistrationModelManager;
 import org.hibernate.SessionFactory;
