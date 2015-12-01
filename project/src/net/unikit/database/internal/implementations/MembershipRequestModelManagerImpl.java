@@ -25,16 +25,6 @@ final class MembershipRequestModelManagerImpl
     }
 
     @Override
-    protected Integer createIdFromBaseIdType(Integer id) {
-        return id;
-    }
-
-    @Override
-    protected Integer createBaseIdFromIdType(Integer id) {
-        return id;
-    }
-
-    @Override
     protected Class getAnnotatedClass() {
         return MembershipRequestModelImpl.class;
     }
