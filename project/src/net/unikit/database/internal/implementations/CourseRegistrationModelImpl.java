@@ -1,5 +1,6 @@
 package net.unikit.database.internal.implementations;
 
+import net.unikit.database.implementations.AbstractModelImpl;
 import net.unikit.database.internal.interfaces.entities.CourseRegistrationModel;
 
 import java.util.Date;
@@ -10,7 +11,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "COURSE_REGISTRATION", uniqueConstraints = @UniqueConstraint(columnNames = {
 		"student_number", "course_id" }) )
-final class CourseRegistrationModelImpl implements CourseRegistrationModel {
+final class CourseRegistrationModelImpl extends AbstractModelImpl<Integer> implements CourseRegistrationModel {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)

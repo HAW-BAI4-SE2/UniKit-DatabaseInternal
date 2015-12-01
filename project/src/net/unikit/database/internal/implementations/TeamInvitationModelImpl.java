@@ -1,5 +1,6 @@
 package net.unikit.database.internal.implementations;
 
+import net.unikit.database.implementations.AbstractModelImpl;
 import net.unikit.database.internal.interfaces.entities.TeamInvitationModel;
 import net.unikit.database.internal.interfaces.entities.TeamModel;
 
@@ -11,7 +12,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "TEAM_INVITATION", uniqueConstraints = @UniqueConstraint(columnNames = {
 		"invitee_student_number", "team_id" }) )
-final class TeamInvitationModelImpl implements TeamInvitationModel {
+final class TeamInvitationModelImpl extends AbstractModelImpl<Integer> implements TeamInvitationModel {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)

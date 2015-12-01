@@ -1,5 +1,6 @@
 package net.unikit.database.internal.implementations;
 
+import net.unikit.database.implementations.AbstractModelImpl;
 import net.unikit.database.internal.interfaces.entities.TeamModel;
 import net.unikit.database.internal.interfaces.entities.TeamRegistrationModel;
 
@@ -11,7 +12,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "TEAM_REGISTRATION", uniqueConstraints = @UniqueConstraint(columnNames = {
 		"student_number", "team_id" }) )
-final class TeamRegistrationModelImpl implements TeamRegistrationModel {
+final class TeamRegistrationModelImpl extends AbstractModelImpl<Integer> implements TeamRegistrationModel {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)

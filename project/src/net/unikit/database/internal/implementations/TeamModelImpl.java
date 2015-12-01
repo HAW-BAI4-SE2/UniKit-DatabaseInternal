@@ -1,6 +1,7 @@
 package net.unikit.database.internal.implementations;
 
 import com.google.common.collect.ImmutableList;
+import net.unikit.database.implementations.AbstractModelImpl;
 import net.unikit.database.internal.interfaces.entities.MembershipRequestModel;
 import net.unikit.database.internal.interfaces.entities.TeamInvitationModel;
 import net.unikit.database.internal.interfaces.entities.TeamModel;
@@ -15,7 +16,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "TEAM")
-final class TeamModelImpl implements TeamModel {
+final class TeamModelImpl extends AbstractModelImpl<Integer> implements TeamModel {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id", unique = true, nullable = false)
