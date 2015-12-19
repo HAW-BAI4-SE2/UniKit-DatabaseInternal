@@ -22,6 +22,9 @@ final class TeamModelImpl extends AbstractModelImpl<Integer> implements TeamMode
 	@Column(name = "id", unique = true, nullable = false)
 	private Integer idField;
 
+	@Column(name = "name", unique = true, nullable = false, length = 63)
+	private String nameField;
+
 	@Column(name = "course_id", nullable = false)
 	private int courseIdField;
 
@@ -48,7 +51,8 @@ final class TeamModelImpl extends AbstractModelImpl<Integer> implements TeamMode
 	public TeamModelImpl() {
 	}
 
-	public TeamModelImpl(int courseIdField, String createdByStudentNumberField, Date createdAtField, Date updatedAtField, List<MembershipRequestModelImpl> membershipRequestModels, List<TeamInvitationModelImpl> teamInvitationModels, List<TeamRegistrationModelImpl> teamRegistrationModels) {
+	public TeamModelImpl(int courseIdField, String nameField, String createdByStudentNumberField, Date createdAtField, Date updatedAtField, List<MembershipRequestModelImpl> membershipRequestModels, List<TeamInvitationModelImpl> teamInvitationModels, List<TeamRegistrationModelImpl> teamRegistrationModels) {
+		this.nameField = nameField;
 		this.courseIdField = courseIdField;
 		this.createdByStudentNumberField = createdByStudentNumberField;
 		this.createdAtField = createdAtField;
@@ -64,6 +68,14 @@ final class TeamModelImpl extends AbstractModelImpl<Integer> implements TeamMode
 
 	void setIdField(Integer idField) {
 		this.idField = idField;
+	}
+
+	String getNameField() {
+		return nameField;
+	}
+
+	void setNameField(String nameField) {
+		this.nameField = nameField;
 	}
 
 	int getCourseIdField() {
@@ -125,6 +137,16 @@ final class TeamModelImpl extends AbstractModelImpl<Integer> implements TeamMode
 	@Transient
 	public Integer getId() {
 		return getIdField();
+	}
+
+	@Transient
+	public String getName() {
+		return getNameField();
+	}
+
+	@Transient
+	public void setName(String name) {
+		setNameField(name);
 	}
 
 	@Transient
